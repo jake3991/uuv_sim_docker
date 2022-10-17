@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>uuv_bruce_teleop</name>
+  <version>0.0.0</version>
+  <description>The uuv_bruce_teleop package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <!-- Example:  -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="ivana@todo.todo">ivana</maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>uuv_sensor_ros_plugins</exec_depend>
+  <exec_depend>uuv_gazebo_ros_plugins</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>uuv_assistants</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <exec_depend>uuv_trajectory_control</exec_depend>
+  <exec_depend>uuv_control_utils</exec_depend>
+  <exec_depend>uuv_descriptions</exec_depend>
+  <exec_depend>uuv_thruster_manager</exec_depend>
+  <exec_depend>uuv_gazebo</exec_depend>
+
+
+  <test_depend>rosunit</test_depend>
+  <test_depend>rostest</test_depend>
+  <test_depend>xacro</test_depend>
+
+
+</package>

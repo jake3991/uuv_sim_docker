@@ -1,0 +1,16 @@
+sudo docker build -t firstbuild -f first_ever.dockerfile .
+
+xhost +
+
+sudo docker run --rm -it --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw -e DISPLAY="$DISPLAY" --privilege -v /dev/bus/usb:/dev/bus/usb firstbuild bash
+
+roslaunch  uuv_bruce_teleop bruce_autonomous.launch
+roslaunch  uuv_bruce_teleop bruce_teleop.launch
+
+
+cd docker_project
+sudo make uuvsim-melodic
+
+xhost local:root
+sudo docker run --rm -it --net=host -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY="$DISPLAY" --privileged -v /dev/bus/usb:/dev/bus/usb pszenher/uuvsim:melodic bash
+
